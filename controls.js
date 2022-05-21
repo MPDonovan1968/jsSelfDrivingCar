@@ -10,10 +10,11 @@ class Controls{
         this.#addKeyboardListeners(); // # = private method
     }
 
+    // FYI : If we did not use Arrow Fx()s below, 'this' inside would refer to the function, not the object
     #addKeyboardListeners(){
         document.onkeydown = (event) =>{
             switch(event.key){
-                case "Arrowleft":
+                case "ArrowLeft":
                     this.left = true;
                     break;
                 case "ArrowRight":
@@ -26,12 +27,12 @@ class Controls{
                     this.reverse = true;
                     break;
             }
-            console.table(this);
+            // console.table(this);
         }
 
         document.onkeyup = (event) =>{
             switch(event.key){
-                case "Arrowleft":
+                case "ArrowLeft":
                     this.left = false;
                     break;
                 case "ArrowRight":
@@ -44,7 +45,7 @@ class Controls{
                     this.reverse = false;
                     break;
             }
-            console.table(this);
+            // console.table(this);
         }
 
 
